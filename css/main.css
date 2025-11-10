@@ -17,6 +17,11 @@ main {
     flex-grow: 1;
 }
 
+h2 {
+    color: #fff;
+    font-size: 12px;
+}
+
 
 
 
