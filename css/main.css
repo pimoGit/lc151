@@ -1,4 +1,19 @@
+/* regole generali */
+a {
+    text-decoration: none;
+}
+
+/* regole header */
+header {
+    position: fixed;
+    width: 100%;
+}
+
+
+/* regole parte contenuto principale */
+
 .flex-container {
+    padding-top: 150px;
     margin: 20px 0;
     /* width: 80%; */
     display: flex;
