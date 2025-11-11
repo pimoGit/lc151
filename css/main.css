@@ -24,6 +24,20 @@ section {
 .card {
     width: calc(100% / 3 - (40px / 3));
     border: solid 1px #ccc;
+    position: relative;
+}
+
+.discount-label {
+    padding: 5px 10px;
+    color: #fff;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.red-discount {
+    background-color: red;
 }
 
 
