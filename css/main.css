@@ -5,27 +5,24 @@
     box-sizing: border-box;
 }
 
-header {
-    background-color: blueviolet;
-    color: #fff;
-    text-align: center;
-    font-size: 30px;
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin-bottom: 10px;
 }
 
-/* versione tablet */
-@media screen and (min-width:768px) {
+/* versione big smartphone */
+@media screen and (min-width:479px) {
 
-    header {
-        background-color: blue;
+    .container {
+        display: flex;
+        gap: 10px;
     }
-}
 
-
-/* versione desktop */
-@media screen and (min-width:1200px) {
-
-    header {
-        background-color: burlywood;
-        font-size: 20px;
+    .box {
+        background-color: rgb(255, 0, 128);
+        margin-bottom: 0;
     }
+
 }
