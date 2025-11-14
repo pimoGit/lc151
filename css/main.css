@@ -14,6 +14,15 @@ ul {
     margin: 20px;
 }
 
+.col1 {
+    height: 100px;
+    background-color: blue;
+}
+
+.col2 {
+    display: none;
+}
+
 /* tablet */
 @media screen and (min-width:780px) {
 
@@ -33,6 +42,26 @@ ul {
         color: #fff;
         display: block;
         text-align: center;
+    }
+
+}
+
+/* desktop */
+@media screen and (min-width:1024px) {
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .col1 {
+        flex-basis: 60%;
+    }
+
+    .col2 {
+        display: block;
+        flex-basis: 35%;
+        background-color: green;
     }
 
 }
