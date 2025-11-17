@@ -18,6 +18,17 @@ img {
     flex-basis: 23%;
 }
 
+.img-float {
+    width: 150px;
+    float: left;
+}
+
+.clerafix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 
 /* tablet */
 @media screen and (max-width:768px) {
