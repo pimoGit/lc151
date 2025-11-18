@@ -6,14 +6,23 @@
 }
 
 
+#wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 header {
     height: 150px;
+    flex-grow: 0;
+    flex-shrink: 0;
     /* DEBUG */
     background-color: blue;
 }
 
 main {
-    height: calc(100vh - 250px);
+    /* height: calc(100vh - 250px); */
+    flex-grow: 1;
     overflow: auto;
     /* DEBUG */
     background-color: blueviolet;
@@ -22,6 +31,8 @@ main {
 
 footer {
     height: 100px;
+    flex-grow: 0;
+    flex-shrink: 0;
     /* DEBUG */
     background-color: brown;
 }
