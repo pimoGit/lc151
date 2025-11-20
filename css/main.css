@@ -6,33 +6,43 @@
 }
 
 
-#wrapper {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-header {
-    height: 150px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    /* DEBUG */
-    background-color: blue;
-}
 
 main {
-    /* height: calc(100vh - 250px); */
-    flex-grow: 1;
-    overflow: auto;
+    height: calc(100vh - 100px);
+    display: flex;
     /* DEBUG */
     background-color: blueviolet;
 }
 
+.sidebar {
+    flex-basis: 250px;
+    flex-shrink: 0;
+    height: 100%;
+    /* DEBUG */
+    background-color: black;
+
+}
+
+.content {
+    flex-grow: 1;
+    height: 100%;
+    overflow: auto;
+    /* DEBUG */
+    background-color: green;
+}
 
 footer {
     height: 100px;
-    flex-grow: 0;
-    flex-shrink: 0;
     /* DEBUG */
     background-color: brown;
+}
+
+@media screen and (max-width:600px) {
+
+    .sidebar {
+        flex-basis: 100px;
+
+
+    }
+
 }
