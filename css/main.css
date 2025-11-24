@@ -1,48 +1,16 @@
-/* regole generali */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* DEBUG */
+[class^='container'] {
+    border: 1px dashed black;
+    background-color: lightblue;
+    min-height: 80vh;
 }
 
-
-
-main {
-    height: calc(100vh - 100px);
-    display: flex;
-    /* DEBUG */
-    background-color: blueviolet;
+[class^='row'] {
+    border: 1px dashed red;
 }
 
-.sidebar {
-    flex-basis: 250px;
-    flex-shrink: 0;
-    height: 100%;
-    /* DEBUG */
-    background-color: black;
-
-}
-
-.content {
-    flex-grow: 1;
-    height: 100%;
-    overflow: auto;
-    /* DEBUG */
-    background-color: green;
-}
-
-footer {
+[class^='col'] {
     height: 100px;
-    /* DEBUG */
-    background-color: brown;
-}
-
-@media screen and (max-width:600px) {
-
-    .sidebar {
-        flex-basis: 100px;
-
-
-    }
-
+    background-color: #f1d2e7;
+    border: 1px solid #d0a8eb;
 }
