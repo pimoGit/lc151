@@ -16,6 +16,13 @@
 }
 
 
+/* header */
+header .nav-link {
+    color: blue;
+}
+
+
+/* section */
 section {
     margin-bottom: 50px;
 }
