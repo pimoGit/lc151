@@ -10,7 +10,7 @@
 }
 
 [class^='col'] {
-    height: 100px;
+    min-height: 100px;
     background-color: #f1d2e7;
     border: 1px solid #d0a8eb;
 }
@@ -20,6 +20,11 @@ section {
     margin-bottom: 50px;
 }
 
-.card {
-    /* robe da fare */
+
+#section-due .card .btn:hover {
+    background-color: #d0a8eb;
+}
+
+.ms-btn-red {
+    background-color: red;
 }
