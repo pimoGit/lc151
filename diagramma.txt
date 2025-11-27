@@ -1,0 +1,41 @@
+--- Simo ci da un layout da fare nel pomeriggio
+-- definisci i passaggi (con eventuali condizioni da valutare) per farlo
+
+
+
+- Leggo le specifiche;
+- Analizzo il layout;
+- mi creo uno schema della macro (non codice);
+
+- apro VSc e creo repo
+    - copio il nome repo
+    - creao la cartella (assegnado nome copiato)
+    - pubblico (push).
+
+- creo il file index;
+- creo cartella CSS;
+- creo file css;
+- start con autocomplete html e link css;
+- push;
+
+SE ci sono imgs
+ - creo cartella img;
+ - inserisco imgs nella cartella;
+ - push;
+
+- definisco la macro struttura (codice);
+
+- FINCHE' non ho finito
+ - lavoro su una sezione html;
+ - aggiunco CSS per la sezione;
+ - pusho sempre!!!;
+ - testo il mio lavoro;
+ - SE ci sono bug
+    - cerco di risolvere;
+    SE risolvo:
+        - passo alla prossima sezione;
+    ALTRIMENTI
+        - apro un ticket
+
+Vado a mangiare
+
