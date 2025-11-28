@@ -1,52 +1,36 @@
+// dichiarazione variabile nome utente
+let nomeUtente;
+
+// dichiarazione e assegnazione cognome utente
+let cognomeUtente = "Rossi";
+
+// dichiarazione variabile pigreco per area cerchio
+const piGreco = 3.14;
+
+// dichiarazione variabile per colore
+let colore;
+// assegnazione valore colore a variabile
+colore = "viola";
+
+// dichiariamo e associamo valore di due stringhe
+const stringaUno = "Primo testo";
+const stringaDue = "Secondo testo";
+
+const stringaCompleta = stringaUno + " " + stringaDue;
+
+const salutoUtente = `Ciao il mio cognome è ${cognomeUtente} è il mio colore preferito é ${colore}`;
+
+console.log(salutoUtente);
 
 
-// dichiarazione variabile
-let miaStringa, variabile2 = "valore", altroNomeVar;
-let altraVar;
-let altraVarAncora = 7;
+console.log(stringaCompleta);
 
-console.log(miaStringa);
+// creiamo due variabili con due numeri
+const numeroUno = 7;
+const numeroDue = 5;
+// moltiplichiamo i due numeri e diamo output risultato in log
+const risultato = numeroUno * numeroDue;
 
-
-
-// assegnazione
-miaStringa = 'ciao';
-
-// // utilizzo/richiamo
-console.log(miaStringa);
-
-// assegnazione
-miaStringa = 10;
-
-// utilizzo/richiamo
-console.log(miaStringa);
-
-const miaVar = "qualcosa";
-
-console.log(miaVar);
-
-// miaVar = "laishdils";
-
-// const nomeUtente = prompt("dammiil tuo nome");
+console.log(`Il risultato della somma è:   ${risultato}`);
 
 
-console.log("valore della var userName = ", userName);
-// undefined
-
-var userName = 'plutonio';
-
-let lungName = userName.length;
-
-let lungNameOutput = `La lunghezza dello user name è = ${lungName}`;
-
-console.log(lungNameOutput);
-
-
-
-let sommaStrana = 8 + 10 + "wdsadas";
-console.log("sommastrana è uguale a:", sommaStrana);
-
-let primoNumero = 0.12345;
-let secondoNumero = 0.231424;
-
-console.log(primoNumero.toFixed(2), primoNumero, typeof miaVar);
