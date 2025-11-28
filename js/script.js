@@ -16,7 +16,7 @@ miaStringa = 'ciao';
 console.log(miaStringa);
 
 // assegnazione
-miaStringa = 'arrivederci';
+miaStringa = 10;
 
 // utilizzo/richiamo
 console.log(miaStringa);
@@ -33,5 +33,20 @@ console.log(miaVar);
 console.log("valore della var userName = ", userName);
 // undefined
 
-var userName = 'pluto';
+var userName = 'plutonio';
 
+let lungName = userName.length;
+
+let lungNameOutput = `La lunghezza dello user name è = ${lungName}`;
+
+console.log(lungNameOutput);
+
+
+
+let sommaStrana = 8 + 10 + "wdsadas";
+console.log("sommastrana è uguale a:", sommaStrana);
+
+let primoNumero = 0.12345;
+let secondoNumero = 0.231424;
+
+console.log(primoNumero.toFixed(2), primoNumero, typeof miaVar);
