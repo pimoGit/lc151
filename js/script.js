@@ -1,11 +1,37 @@
-// write line (deprecato e poco utile)
-// document.writeln('Hello World!');
 
-// alert (utile per debug e poco altro)
-// alert('Hello World!');
 
-// DOM manipulation (modifica utile e ricorrente)
-document.getElementById('mio_id').innerHTML = 'Hello World!';
+// dichiarazione variabile
+let miaStringa, variabile2 = "valore", altroNomeVar;
+let altraVar;
+let altraVarAncora = 7;
 
-// log
-console.log("Hello World, ma solo per gli sviluppaoti!!");
+console.log(miaStringa);
+
+
+
+// assegnazione
+miaStringa = 'ciao';
+
+// // utilizzo/richiamo
+console.log(miaStringa);
+
+// assegnazione
+miaStringa = 'arrivederci';
+
+// utilizzo/richiamo
+console.log(miaStringa);
+
+const miaVar = "qualcosa";
+
+console.log(miaVar);
+
+// miaVar = "laishdils";
+
+// const nomeUtente = prompt("dammiil tuo nome");
+
+
+console.log("valore della var userName = ", userName);
+// undefined
+
+var userName = 'pluto';
+
