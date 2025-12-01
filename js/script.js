@@ -1,36 +1,49 @@
-// volgiamo chiedere all'utente due parole e dirgli quale è più lunga
+// gioco pari o dispari
+// l'utente scegli un numero (1-5) e se secondo il risultato sarà pari/dispari
+//  il PC lancia il suo numero (1-5)
+//  se il totale è pari vince chi ha scelto pari, altrimenti il contrario
 
+// SETUP 
+let segnoSomma, messaggio;
 
-// SETTAGGIO PARTE INIZIALE
-let messaggio;
+// INPUT
+// chiedo a User numero (1-5)
+const numUser = parseInt(prompt("Scegli un numero da 1 a 5"));
+// chiedo a User la sua puntata (pari/dispari)
+const puntataUser = prompt("Scrivi una puntata (pari/dispari)");
 
-// INPUT (variabili e dati in ingresso)
-// chiediamo a User le età (e le salviamo)
-const parola1 = prompt("Inserisci la prima parola");
-const parola2 = prompt("Inserisci la seconda parola");
-console.log(parola1, parola2);
-
-// const numberEtaUtente1 = parseInt(etaUtente1);
-// console.log(typeof numberEtaUtente1);
-const lungParola1 = parola1.length;
-const lungParola2 = parola2.length;
-
-
+// faccio generare da PC il suo numero (1-5)
+const numPC = Math.floor(Math.random() * 5) + 1;
+console.log(numUser, puntataUser, numPC);
 
 // ELABORAZIONE
-// valuto se la prima parola  è più lunga della seconda
-if (lungParola1 > lungParola2) {
-    // console.log("Utente uno più vecchio");
-    messaggio = "parola  è più lunga della seconda";
-} else if (lungParola1 < lungParola2) { // valuto se la prima parola  è più corta della seconda
-    // console.log("Utente uno più giovane");
-    messaggio = "prima parola  è più corta della seconda"
-} else { // valuto se le parole sono lunghe uguali
-    // console.log("Gli Utenti hanno la stessa età");
-    messaggio = "le parole sono lunghe uguali";
-}
+// sommiamo i numeri di User e PC
+const sommaNumber = numUser + numPC;
+console.log(sommaNumber);
 
+// verifichiamo se somma è pari/dispari
+if (sommaNumber % 2 === 0) {
+    segnoSomma = "pari";
+} else {
+    segnoSomma = "dispari";
+}
+console.log(segnoSomma);
+
+
+// confrontiamo segnoSomma con puntata User (se puntata corrisponde a segnoSomma vince utente)
+if (segnoSomma === puntataUser) {
+    // ha vinto user
+    messaggio = "Hai vinto!!!!";
+} else {
+    // ha vinto PC
+    messaggio = "Hai perso!!!";
+}
 
 // OUTPUT
 console.log(messaggio);
-document.getElementById("mio_id").innerHTML = messaggio;
+
+
+
+
+
+
