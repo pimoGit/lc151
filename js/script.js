@@ -1,36 +1,29 @@
-// dichiarazione variabile nome utente
-let nomeUtente;
-
-// dichiarazione e assegnazione cognome utente
-let cognomeUtente = "Rossi";
-
-// dichiarazione variabile pigreco per area cerchio
-const piGreco = 3.14;
-
-// dichiarazione variabile per colore
-let colore;
-// assegnazione valore colore a variabile
-colore = "viola";
-
-// dichiariamo e associamo valore di due stringhe
-const stringaUno = "Primo testo";
-const stringaDue = "Secondo testo";
-
-const stringaCompleta = stringaUno + " " + stringaDue;
-
-const salutoUtente = `Ciao il mio cognome è ${cognomeUtente} è il mio colore preferito é ${colore}`;
-
-console.log(salutoUtente);
+// volgiamo chiedere all'utente due età e dirgli ci è più vecchio
 
 
-console.log(stringaCompleta);
+// SETTAGGIO PARTE INIZIALE
+// INPUT (variabili e dati in ingresso)
+// chiediamo a User le età (e le salviamo)
+const etaUtente1 = parseInt(prompt("Inserisci la prima età"));
+const etaUtente2 = parseInt(prompt("Inserisci la seconda età"));
+console.log(etaUtente1, etaUtente2);
 
-// creiamo due variabili con due numeri
-const numeroUno = 7;
-const numeroDue = 5;
-// moltiplichiamo i due numeri e diamo output risultato in log
-const risultato = numeroUno * numeroDue;
-
-console.log(`Il risultato della somma è:   ${risultato}`);
+// const numberEtaUtente1 = parseInt(etaUtente1);
+// console.log(typeof numberEtaUtente1);
 
 
+
+// ELABORAZIONE
+// valuto se l'età uno è maggiore della due
+if (etaUtente1 > etaUtente2) {
+    console.log("Utente uno più vecchio");
+} else if (etaUtente1 < etaUtente2) { // valuto se l'età uno è minore della due
+    console.log("Utente uno più giovane");
+} else { // valuto se età sono uguali
+    console.log("Gli Utenti hanno la stessa età");
+}
+
+
+
+
+// OUTPUT
