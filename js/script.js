@@ -10,10 +10,10 @@ console.log(miaLIsta);
 //  usiamo un ciclo FOR per farlo
 for (let i = 99; i >= 1; i--) {
     if (i % 2 === 1) { // se il numero è dispari
-        console.log(i);
+        let contenutoUlMomentaneo = miaLIsta.innerHTML;
+        console.log(contenutoUlMomentaneo);
         // miaLIsta.innerHTML = miaLIsta.innerHTML + `<li> il numero è ${i} </li>`;
         miaLIsta.innerHTML += `<li> il numero è ${i} </li>`;
-
     }
     // console.log(i);
 
