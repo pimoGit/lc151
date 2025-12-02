@@ -50,3 +50,20 @@ while (condizione) {
 do {
     // fai quello che devi dal ciclo almeno una volta
 } while (condition);
+
+
+// 1
+// 2
+// FIZZ
+// 4
+// BUZZ
+// FIZZ
+// 7
+// 8
+// FIZZ
+// BUZZ
+// 11
+// FIZZ
+// 13
+// 14
+// FIZZBUZZ
