@@ -1,27 +1,42 @@
-const numbers = [3, 51, 2, 70, 8, 12, 13, 33];
+// Dichiarazione funzione
+function sommaNumeri(num1, num2) {
 
-console.log("la lunghezza dell'array numbers é: ", numbers.length);
+    const risultato = num1 + num2;
 
-
-
-// stampiamo  i numeri dispari dell'array
-for (let i = 0; i < numbers.length; i++) {
-
-    let numberIesimo = numbers[i];
-
-    // stampiamo solo i numeri (dell'array) che sono dispari
-    if (numberIesimo % 2 !== 0) {
-        // console.log("al giro del for numero", i, "le'lemento dellarray è: ", numberIesimo);
-        console.log(numberIesimo);
-    }
+    return risultato;
 
 }
 
-// stampiano tutti i numeri dispari da 1 a 100
+function sommaAlert(num1, num2) {
+    alert(num1 + num2);
+}
 
-// for (let i = 1; i < 100; i++) {
-//     if (i % 2 === 1) {
-//         console.log(i);
-//     }
 
-// }
+// Invocazione/esecuzione funzione
+const somma1 = sommaNumeri(49, 2);
+const somma2 = sommaNumeri(5, 7);
+
+
+// console.log(sommaNumeri(49, 2));
+
+
+// 100LOC
+// somma 
+// somma...
+
+const totaleAddizionato = somma1 + somma2;
+const totaleMoltiplicato = somma1 * somma2;
+
+
+console.log(totale);
+
+
+
+// console.log(somma, somma2); // 51
+
+sommaAlert(5, 10);
+// console.log(sommaNumeri(49, 2));
+
+
+// console.log(risultato); // "ReferenceError: risultato is not defined
+
