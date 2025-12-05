@@ -1,51 +1,54 @@
 
-// parte di revert della parola
-const parolaRevertata = revertaStringa("Ciao") //oaiC
-const parolaRevertata2 = revertaStringa("Vacanza")
+logCurrentTime();
 
-console.log(parolaRevertata, parolaRevertata2);
+// 10K LOC
 
 
-// parte di capitalizzazione parola
-const inputUser = prompt("inserisci una parola");
-
-const upperString = capitalizzaParola(inputUser);
-
-console.log(upperString);
-
-
-
-// const miastrainga = "Simone";
-// console.log(miastrainga[1]);
+outputPageCurrentTime();
 
 
 // FUNZIONI
 
-// funzione che mi ritona una stringa capovolta
-function revertaStringa(string) {
+// funzione che mi fa un log del tempo corrente
+function logCurrentTime() {
 
-    let risultato = "";
+    // creo l'oggetto data da pc utente
+    const now = new Date();
+    // console.log(now);
 
-    for (let i = string.length - 1; i >= 0; i--) {
-        risultato = risultato + string[i];
-    }
+    // mi creo la stringa con l'ora esatta
+    const hour = now.getHours();
 
-    return risultato
+    // mi creo la stringa con i minuti esatti
+    const minutes = now.getMinutes();
+
+    // mi creo la stringa con i secondi esatti
+    const seconds = now.getSeconds();
+
+    // mi compongo la stringa completa di output
+    const currentTime = `${hour}:${minutes}:${seconds}`;
+
+    console.log(currentTime);
 
 }
 
-// funzione che capitalizza una parola
-function capitalizzaParola(parola) {
+// funzione di log tempo in pagina
+function outputPageCurrentTime() {
+    // creo l'oggetto data da pc utente
+    const now = new Date();
+    // console.log(now);
 
-    // estrapolo primo carattere e lo forzo a maiuscolo
-    const primaLettera = parola[0].toUpperCase();
-    // estrapolo resto della stringa e la forzo a minuscolo
-    const restoParola = parola.substring(1).toLowerCase();
+    // mi creo la stringa con l'ora esatta
+    const hour = now.getHours();
 
-    // riconpongo la parola
-    const stringaCompleta = primaLettera + restoParola;
+    // mi creo la stringa con i minuti esatti
+    const minutes = now.getMinutes();
 
-    // ristorno la parola modificata
-    return stringaCompleta;
+    // mi creo la stringa con i secondi esatti
+    const seconds = now.getSeconds();
 
+    // mi compongo la stringa completa di output
+    const currentTime = `${hour}:${minutes}:${seconds}`;
+
+    document.getElementById("lista_output").innerHTML = currentTime;
 }
