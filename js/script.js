@@ -1,48 +1,34 @@
-// Invocazione/esecuzione funzione
-const somma1 = sommaNumeri(49, 2);
-const somma2 = sommaNumeri(5, 7);
 
+const numeRandom = generaNumRandInRange(50, 150);
 
-// console.log(sommaNumeri(49, 2));
+const nuovoNumRandom = generaNumRandInRange(30, 90);
 
+console.log(numeRandom, nuovoNumRandom);
 
-// 100LOC
-// somma 
-// somma...
+// const numeRandom = Math.floor(Math.random() * (150 - 50)) + 50;
 
-const totaleAddizionato = somma1 + somma2;
-const totaleMoltiplicato = somma1 * somma2;
-
-
-console.log(totaleAddizionato, totaleMoltiplicato);
-
-
-
-// console.log(somma, somma2); // 51
-
-sommaAlert(5, 10);
-// console.log(sommaNumeri(49, 2));
-
-
-// console.log(risultato); // "ReferenceError: risultato is not defined
-
+console.log(valutaPariODispari(numeRandom), valutaPariODispari(nuovoNumRandom));
 
 
 
 
 // FUNZIONI
-// Dichiarazione funzione
+// funzione che genera un numero random in un range (min-max)
+function generaNumRandInRange(min, max) {
 
-// funzione che somma due numeri e ritorna il risultato
-function sommaNumeri(num1, num2) {
+    const risultato = Math.floor(Math.random() * (max - min)) + min;
 
-    const risultato = num1 + num2;
+    return risultato
+}
 
-    return risultato;
+// funzione che mi indica se un numero è pari o dispari
+function valutaPariODispari(numero) {
+
+    if (numero % 2 === 0) {
+        return "pari";
+    } else {
+        return "dispari"
+    }
 
 }
 
-// funzione che somma due numeri e fa oputput del risultato direttamente in alert
-function sommaAlert(num1, num2) {
-    alert(num1 + num2);
-}
