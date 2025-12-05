@@ -1,34 +1,51 @@
 
-const numeRandom = generaNumRandInRange(50, 150);
+// parte di revert della parola
+const parolaRevertata = revertaStringa("Ciao") //oaiC
+const parolaRevertata2 = revertaStringa("Vacanza")
 
-const nuovoNumRandom = generaNumRandInRange(30, 90);
-
-console.log(numeRandom, nuovoNumRandom);
-
-// const numeRandom = Math.floor(Math.random() * (150 - 50)) + 50;
-
-console.log(valutaPariODispari(numeRandom), valutaPariODispari(nuovoNumRandom));
+console.log(parolaRevertata, parolaRevertata2);
 
 
+// parte di capitalizzazione parola
+const inputUser = prompt("inserisci una parola");
+
+const upperString = capitalizzaParola(inputUser);
+
+console.log(upperString);
+
+
+
+// const miastrainga = "Simone";
+// console.log(miastrainga[1]);
 
 
 // FUNZIONI
-// funzione che genera un numero random in un range (min-max)
-function generaNumRandInRange(min, max) {
 
-    const risultato = Math.floor(Math.random() * (max - min)) + min;
+// funzione che mi ritona una stringa capovolta
+function revertaStringa(string) {
 
-    return risultato
-}
+    let risultato = "";
 
-// funzione che mi indica se un numero è pari o dispari
-function valutaPariODispari(numero) {
-
-    if (numero % 2 === 0) {
-        return "pari";
-    } else {
-        return "dispari"
+    for (let i = string.length - 1; i >= 0; i--) {
+        risultato = risultato + string[i];
     }
 
+    return risultato
+
 }
 
+// funzione che capitalizza una parola
+function capitalizzaParola(parola) {
+
+    // estrapolo primo carattere e lo forzo a maiuscolo
+    const primaLettera = parola[0].toUpperCase();
+    // estrapolo resto della stringa e la forzo a minuscolo
+    const restoParola = parola.substring(1).toLowerCase();
+
+    // riconpongo la parola
+    const stringaCompleta = primaLettera + restoParola;
+
+    // ristorno la parola modificata
+    return stringaCompleta;
+
+}
