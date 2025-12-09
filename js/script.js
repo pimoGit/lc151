@@ -1,11 +1,15 @@
 // versione arrow
-const myFuncion = () => console.log("ciao a tutti");
+const sommaArrow = (num1, num2) => num1 + num2;
 
 
 
 
 
-myFuncion();
+console.log(somma(4, 8));
+console.log(sommaArrow(10, 13));
+
+
+
 
 
 
@@ -14,9 +18,9 @@ myFuncion();
 
 // FUNZIONI
 // versione tradizionale
-// function myFuncion() {
-//     console.log("ciao a tutti");
-// }
+function somma(num1, num2) {
+    return num1 + num2;
+}
 
 
 
