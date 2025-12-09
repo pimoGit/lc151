@@ -2,6 +2,12 @@
 const sommaArrow = (num1, num2) => num1 + num2;
 
 
+const isEven = number => number % 2 === 0;
+
+const valueisEven = isEven(8);
+
+console.log(valueisEven);
+
 
 
 
@@ -23,6 +29,11 @@ function somma(num1, num2) {
 }
 
 
+// function isEven(number) {
+
+// return number % 2 === 0
+//     
+// }
 
 
 
