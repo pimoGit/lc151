@@ -7,7 +7,13 @@ a = 0;
 b = "buongiorno"
 var c = "ciao";
 
+console.log("il valore di h prima dell'esecuzione della funzione è " + h);
+
+
 saluta();
+
+console.log("il valore di h dopo l'esecuzione della funzione è " + h);
+
 
 console.log("a is " + a);
 console.log("b is " + b);
