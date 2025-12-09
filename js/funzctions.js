@@ -15,9 +15,13 @@ const isInArray = (myArray, myValue) => {
             found = true;
         }
 
+        // elementNumI === myValue ? found = true : "";
+
     }
 
 
     // ritorno il valore della variabile flag/stato
     return found
 }
+
+

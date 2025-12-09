@@ -1,10 +1,25 @@
-const students = ["Francesca", "Mario", "Filippa", "Mattia"];
+let messaggio;
+const outputEl = document.getElementById("lista_output");
 
-console.log(isInArray(students, "Mario"));
-console.log(isInArray(students, "Valeria"));
+// lista invitati
+const invitati = ["Francesca", "Mario", "Filippa", "Mattia"];
 
-const numbers = [5, 7, 12, 123, 44, 5];
+//  input nome utente
+const UserName = prompt("inserisci il tuo nome, per vedere se sei stato invitato");
 
-console.log((isInArray(numbers, 6)));
-console.log((isInArray(numbers, 44)));
+// check se utente è presente nella lista
+const isInvited = isInArray(invitati, UserName);
 
+console.log(isInvited);
+
+
+// output per l'iutente
+// if (isInvited) {
+//     messaggio = "sei stato invitato";
+// } else {
+//     messaggio = "Non sei stato invitato";
+// }
+
+messaggio = isInvited ? "sei stato invitato" : "Non sei stato invitato";
+
+outputEl.innerHTML = messaggio;
