@@ -1,40 +1,10 @@
-// versione arrow
-const sommaArrow = (num1, num2) => num1 + num2;
+const students = ["Francesca", "Mario", "Filippa", "Mattia"];
 
+console.log(isInArray(students, "Mario"));
+console.log(isInArray(students, "Valeria"));
 
-const isEven = number => number % 2 === 0;
+const numbers = [5, 7, 12, 123, 44, 5];
 
-const valueisEven = isEven(8);
-
-console.log(valueisEven);
-
-
-
-
-console.log(somma(4, 8));
-console.log(sommaArrow(10, 13));
-
-
-
-
-
-
-
-
-
-// FUNZIONI
-// versione tradizionale
-function somma(num1, num2) {
-    return num1 + num2;
-}
-
-
-// function isEven(number) {
-
-// return number % 2 === 0
-//     
-// }
-
-
-
+console.log((isInArray(numbers, 6)));
+console.log((isInArray(numbers, 44)));
 
