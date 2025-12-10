@@ -14,7 +14,9 @@ const text = element.innerHTML;
 
 console.log(text);
 
-element.innerHTML = "<span> altro...</span>";
+// element.innerHTML = element.innerHTML + "<span> altro...</span>";
+element.innerHTML += "<span> altro...</span>";
+
 
 
 
