@@ -17,6 +17,8 @@ console.log(text);
 // element.innerHTML = element.innerHTML + "<span> altro...</span>";
 element.innerHTML += "<span> altro...</span>";
 
+element.append("nuovo contenuto");
+
 
 
 
