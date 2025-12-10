@@ -1,40 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- embedding fontawesome -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <title>Test JS 151</title>
+    <title>Hamburger Menu</title>
 </head>
 
 <body>
 
-    <p id="outputPage">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae explicabo accusamus aliquid veniam quos dolore
-        velit pariatur ad iste illum maiores consectetur sit assumenda officia quo, dolor, quas doloribus! Molestias.
-    </p>
-
-
-
-    <!-- <script type="text/javascript" src="js/funzctions.js"></script> -->
-
-    <script type="text/javascript" src="js/script.js">
-    </script>
-
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script> 
-        -->
-
+    <header>
+        <div class="header-left">
+            <img src="img/logo.png" alt="Boolean Careers">
+        </div>
+        <div class="header-right">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Scopri il Corso</a>
+                </li>
+                <li>
+                    <a href="#">La nostra storia</a>
+                </li>
+                <li>
+                    <a href="#" class="cta">Iscriviti</a>
+                </li>
+            </ul>
+            <button id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="mobile-menu">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Scopri il Corso</a>
+                </li>
+                <li>
+                    <a href="#">La nostra storia</a>
+                </li>
+                <li>
+                    <a href="#" class="cta">Iscriviti</a>
+                </li>
+            </ul>
+            <button class="close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </header>
+    <script src="js/script.js" charset="utf-8"></script>
 </body>
 
 </html>
