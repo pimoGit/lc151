@@ -7,16 +7,11 @@ const mobileMenu = document.querySelector(".mobile-menu");
 const closeButton = document.querySelector(".close");
 
 // gestione apertura menù
-menuButton.addEventListener("click",
-    function () {
-        // apri sto maledetto menù
-        mobileMenu.classList.add("active");
-    }
-)
+menuButton.addEventListener("click", () => mobileMenu.classList.add("active"));
 
 // gestione chiusura menù
 closeButton.addEventListener("click",
-    function () {
+    () => {
         // chiudi sto maledetto menù
         mobileMenu.classList.remove("active");
     }
