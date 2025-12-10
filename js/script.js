@@ -1,34 +1,9 @@
-const element = document.querySelector('.red');
+const button = document.querySelector('button');
 
-const elementSaluto = document.getElementById("saluto");
+function logNumber(num) {
+    console.log('Il numero è: ' + num)
+}
 
-const elementoAltro = document.querySelector(".classe_elemento");
-
-const imgRef = document.querySelector("img");
-
-
-
-console.log(typeof element);
-
-const text = element.innerHTML;
-
-console.log(text);
-
-// element.innerHTML = element.innerHTML + "<span> altro...</span>";
-element.innerHTML += "<span> altro...</span>";
-
-element.append("nuovo contenuto");
-
-
-
-
-// elementSaluto.className = "titolo";
-// elementSaluto.className = elementSaluto.classList + " titolo";
-elementSaluto.classList.add("titolo");
-
-
-elementoAltro.style.color = "green";
-
-
-imgRef.src = "img/beats-2.jpg";
-imgRef.alt = "cuffie nere";
+button.addEventListener('click', function () {
+    logNumber(3);
+});
