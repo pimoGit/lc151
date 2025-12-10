@@ -5,12 +5,13 @@ const paragrafo = document.getElementById("outputPage");
 paragrafo.addEventListener("click",
 
     function () {
-        if (paragrafo.classList.contains("changeColors")) {
-            // rimuovo la calsse
-            paragrafo.classList.remove("changeColors");
-        } else {
-            // aggiungo la classe
-            paragrafo.classList.add("changeColors");
-        }
+        // if (paragrafo.classList.contains("changeColors")) {
+        //     // rimuovo la calsse
+        //     paragrafo.classList.remove("changeColors");
+        // } else {
+        //     // aggiungo la classe
+        //     paragrafo.classList.add("changeColors");
+        // }
+        paragrafo.classList.toggle("changeColors");
     }
 );
