@@ -15,7 +15,11 @@
     border: 1px solid #d0a8eb;
 } */
 
-.mioli {
+#outputPage {
+    cursor: pointer;
+}
+
+.changeColors {
     color: red;
     background-color: yellow;
 }
