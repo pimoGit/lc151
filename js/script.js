@@ -1,25 +1,19 @@
-let messaggio;
-const outputEl = document.getElementById("lista_output");
+const element = document.querySelector('.red');
 
-// lista invitati
-const invitati = ["Francesca", "Mario", "Filippa", "Mattia"];
-
-//  input nome utente
-const UserName = prompt("inserisci il tuo nome, per vedere se sei stato invitato");
-
-// check se utente è presente nella lista
-const isInvited = isInArray(invitati, UserName);
-
-console.log(isInvited);
+const elementSaluto = document.getElementById("saluto");
 
 
-// output per l'iutente
-// if (isInvited) {
-//     messaggio = "sei stato invitato";
-// } else {
-//     messaggio = "Non sei stato invitato";
-// }
 
-messaggio = isInvited ? "sei stato invitato" : "Non sei stato invitato";
+console.log(typeof element);
 
-outputEl.innerHTML = messaggio;
+const text = element.innerHTML;
+
+console.log(text);
+
+element.innerHTML = "<span> altro...</span>";
+
+
+
+// elementSaluto.className = "titolo";
+// elementSaluto.className = elementSaluto.classList + " titolo";
+elementSaluto.classList.add("titolo");
