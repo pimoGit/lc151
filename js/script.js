@@ -51,8 +51,7 @@ form.addEventListener("submit", (event) => {
     previewCard.classList.remove("sparisci");
 
     // pulisco i campi del form dopo l'invio
-    titleField.value = "";
-    nameField.value = "";
+    form.reset();
 })
 
 
