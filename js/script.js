@@ -1,5 +1,6 @@
 const field = document.getElementById('name');
-const button = document.querySelector('button');
+// const button = document.querySelector('button');
+const mioForm = document.getElementById("myForm");
 const numberInput = document.getElementById("numero");
 const paragrafo = document.querySelector(".output");
 
@@ -10,7 +11,10 @@ const paragrafo = document.querySelector(".output");
 
 // let nameUserInterno;
 
-button.addEventListener('click', () => {
+mioForm.addEventListener('submit', (e) => {
+
+    e.preventDefault();
+
     const nameUserInterno = field.value;
     const numeroUser = parseInt(numberInput.value);
     console.log("secondo tentativo da evento click, CB", nameUserInterno, numeroUser);
