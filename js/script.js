@@ -1,38 +1,21 @@
-const field = document.getElementById('name');
-// const button = document.querySelector('button');
-const mioForm = document.getElementById("myForm");
-const numberInput = document.getElementById("numero");
-const paragrafo = document.querySelector(".output");
+// PARTE DI PREPARAZIONE
 
-// se proviamo a leggere qui, sarà sempre vuoto
-// const nameUser = field.value; //
+// selezioniamo tutti i campi (select/input)
+const titleField = document.getElementById("title-field");
+const nameField = document.getElementById('name-field');
+const companyField = document.getElementById('company-field');
+const roleField = document.getElementById('role-field');
+const emailField = document.getElementById('email-field');
+const phoneField = document.getElementById('phone-field');
+const picField = document.getElementById('company-pic-field');
 
-// console.log("primo tentativo fallace di ritorno valore: ", nameUser);
-
-// let nameUserInterno;
-
-mioForm.addEventListener('submit', (e) => {
-
-    e.preventDefault();
-
-    const nameUserInterno = field.value;
-    const numeroUser = parseInt(numberInput.value);
-    console.log("secondo tentativo da evento click, CB", nameUserInterno, numeroUser);
-    // scriviamo output
-    paragrafo.innerText = nameUserInterno + numeroUser;
-    // pulire i campi
-    field.value = "";
-    numberInput.value = "";
-});
-
-// evento alternativo di input su campo
-field.addEventListener("input", () => {
-    const nameUserInterno = field.value;
-    // output
-    paragrafo.innerText = nameUserInterno;
-})
+// seleziono il form di riferimento
+const form = document.querySelector('form');
 
 
 
+// PARTE DI ELABORAZIONE
 
-// console.log("altro tentativo fallace fuori da CB evento", nameUserInterno);
+
+
+// PARTE DI OUTPUT
