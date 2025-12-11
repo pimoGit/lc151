@@ -21,5 +21,14 @@ button.addEventListener('click', () => {
     numberInput.value = "";
 });
 
+// evento alternativo di input su campo
+field.addEventListener("input", () => {
+    const nameUserInterno = field.value;
+    // output
+    paragrafo.innerText = nameUserInterno;
+})
+
+
+
 
 // console.log("altro tentativo fallace fuori da CB evento", nameUserInterno);
