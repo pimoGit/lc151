@@ -23,6 +23,13 @@ const companyPic = document.getElementById('company-pic');
 
 
 // PARTE DI ELABORAZIONE
+form.addEventListener("submit", (event) => {
+    // blocchiamo comportamento di base del form
+    event.preventDefault();
+
+    console.log("hai inviato il form");
+
+})
 
 
 
