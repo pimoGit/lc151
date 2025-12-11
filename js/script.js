@@ -50,6 +50,9 @@ form.addEventListener("submit", (event) => {
     // gestione visibilità della card all'invio
     previewCard.classList.remove("sparisci");
 
+    // pulisco i campi del form dopo l'invio
+    titleField.value = "";
+    nameField.value = "";
 })
 
 
