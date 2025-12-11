@@ -12,6 +12,14 @@ const picField = document.getElementById('company-pic-field');
 // seleziono il form di riferimento
 const form = document.querySelector('form');
 
+// seleziono tutti gli elementi di pagina relativi ai campi
+const title = document.getElementById("title");
+const name = document.getElementById('name');
+const company = document.getElementById('company');
+const role = document.getElementById('role');
+const email = document.getElementById('email');
+const phone = document.getElementById('phone');
+const companyPic = document.getElementById('company-pic');
 
 
 // PARTE DI ELABORAZIONE
