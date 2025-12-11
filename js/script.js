@@ -1,18 +1,12 @@
-// parte di preparazione
-// selezione elemento di hamburger
-const menuButton = document.getElementById("menu-toggle");
-// selezioniamo elemento di mobile
-const mobileMenu = document.querySelector(".mobile-menu");
-// seleziono elemento di chiusura
-const closeButton = document.querySelector(".close");
+const list = document.querySelector(".list");
+const names = ['Qui', 'Quo', 'Qua'];
 
-// gestione apertura menù
-menuButton.addEventListener("click", () => mobileMenu.classList.add("active"));
+let items = '';
 
-// gestione chiusura menù
-closeButton.addEventListener("click",
-    () => {
-        // chiudi sto maledetto menù
-        mobileMenu.classList.remove("active");
-    }
-)
+for (let i = 0; i < names.length; i++) {
+    items += `<li>${names[i]}</li>`;
+    console.log(items, "iterazione numero: ", i);
+
+}
+
+list.innerHTML = items;
