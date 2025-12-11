@@ -14,7 +14,7 @@ const form = document.querySelector('form');
 
 // seleziono tutti gli elementi di pagina relativi ai campi
 const title = document.getElementById("title");
-const name = document.getElementById('name');
+const nameUser = document.getElementById('name');
 const company = document.getElementById('company');
 const role = document.getElementById('role');
 const email = document.getElementById('email');
@@ -27,10 +27,19 @@ form.addEventListener("submit", (event) => {
     // blocchiamo comportamento di base del form
     event.preventDefault();
 
-    console.log("hai inviato il form");
+    // console.log("hai inviato il form");
+
+
+    // PARTE DI OUTPUT
+    title.innerText = titleField.value;
+    nameUser.innerText = nameField.value.trim();
+    company.innerText = companyField.value.trim();
+    role.innerText = roleField.value.trim();
+    email.innerText = emailField.value.trim();
+    phone.innerText = phoneField.value.trim();
+    companyPic.src = picField.value;
 
 })
 
 
 
-// PARTE DI OUTPUT
