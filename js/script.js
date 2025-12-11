@@ -1,26 +1,17 @@
-const list = document.querySelector(".list");
-const names = ['Qui', 'Quo', 'Qua'];
+const field = document.getElementById('name');
+const button = document.querySelector('button');
+
+// se proviamo a leggere qui, sarà sempre vuoto
+const nameUser = field.value; //
+
+console.log("primo tentativo fallace di ritorno valore: ", nameUser);
+
+// let nameUserInterno;
+
+button.addEventListener('click', () => {
+    const nameUserInterno = field.value;
+    console.log("secondo tentativo da evento click, CB", nameUserInterno);
+});
 
 
-
-// versione con innerHTML
-let items = '';
-
-for (let i = 0; i < names.length; i++) {
-    items += `<li>${names[i]}</li>`;
-    console.log(items, "iterazione numero: ", i);
-
-}
-
-list.innerHTML = items;
-
-
-// versione con createElement e append
-for (let i = 0; i < names.length; i++) {
-    // creo un elemento <li> reale
-    const li = document.createElement('li');
-    // inserisco il contenuto 
-    li.append(names[i]);
-    // aggiungo il <li> creato e modificato con il contenuto nel <ul>
-    list.appendChild(li);
-}
+// console.log("altro tentativo fallace fuori da CB evento", nameUserInterno);
