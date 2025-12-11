@@ -12,6 +12,9 @@ const picField = document.getElementById('company-pic-field');
 // seleziono il form di riferimento
 const form = document.querySelector('form');
 
+// seleziono la card
+const previewCard = document.querySelector(".card");
+
 // seleziono tutti gli elementi di pagina relativi ai campi
 const title = document.getElementById("title");
 const nameUser = document.getElementById('name');
@@ -23,6 +26,11 @@ const companyPic = document.getElementById('company-pic');
 
 
 // PARTE DI ELABORAZIONE
+
+// gestione visibilità iniziale della card
+previewCard.classList.add("sparisci");
+
+// gestione dell'invio del form
 form.addEventListener("submit", (event) => {
     // blocchiamo comportamento di base del form
     event.preventDefault();
@@ -38,6 +46,9 @@ form.addEventListener("submit", (event) => {
     email.innerText = emailField.value.trim();
     phone.innerText = phoneField.value.trim();
     companyPic.src = picField.value;
+
+    // gestione visibilità della card all'invio
+    previewCard.classList.remove("sparisci");
 
 })
 
