@@ -21,15 +21,29 @@ let timer;
 startButton.addEventListener("click", () => {
 
     // gestire disable dei bottoni
+    startButton.disabled = true;
+    stopButton.disabled = false;
 
     // gestiamo il timer
+    let seconds = 0;
+    display.innerText = seconds;
 
     // interval con incremento dei secondi
+    timer = setInterval(() => {
+        // vado a incrementare secondi e aggiorno output
+        display.innerText = ++seconds;
+    }, 1000);
 
 });
 
 
 // -------
 // gestione dello stop
-// gestire disable dei bottoni
-// blocchiamo il timer
+stopButton.addEventListener("click", () => {
+    // gestire disable dei bottoni
+    startButton.disabled = false;
+    stopButton.disabled = true;
+
+    // blocchiamo il timer
+    clearInterval(timer);
+})
