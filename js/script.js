@@ -29,7 +29,7 @@ startButton.addEventListener("click", () => {
     display.innerText = seconds;
 
     // interval con incremento dei secondi
-    timer = setInterval(() => {
+    timer = setInterval(function () {
         // vado a incrementare secondi e aggiorno output
         display.innerText = ++seconds;
     }, 1000);
@@ -47,3 +47,11 @@ stopButton.addEventListener("click", () => {
     // blocchiamo il timer
     clearInterval(timer);
 })
+
+
+
+// FUNZIONI
+function incrementTimer(conteggio) {
+    // vado a incrementare secondi e aggiorno output
+    display.innerText = ++conteggio;
+}
