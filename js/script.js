@@ -1,27 +1,23 @@
-// generiamo un conutdown di capodanno
+// creiamo un cronometro
 
-// selezioniamo l'elemento di output
-const myOutput = document.getElementById("show");
+// PREPARAZIONE
 
-// variabile di inizio conteggio
-let seconds = 10;
+// selezioniamo tutti gli elementi di input e output di pagina
 
-// // inseriamo output aggiornato secondi
-myOutput.innerText = seconds;
 
-// gestiamo ogni secondo l'aggiornamento dell'output
-const clock = setInterval(() => {
-    // SE siamo alla fine (secondi sono 0) - fermiamo il conteggio e diamo messaggio nuovo
-    if (seconds === 0) {
-        // blocco la ripetizione temporale
-        clearInterval(clock);
-        myOutput.innerText = "Bauo anno!!!!";
-    } else {
-        // decrementiamo seconds
-        seconds = seconds - 1;
-        // inseriamo output aggiornato secondi
-        myOutput.innerText = seconds;
-    }
 
-}, 1000)
-// ogni secondo scala una unità
+
+// ELABORAZIONE (e OUTPUT)
+
+// -------
+// gestione dello start
+// gestire disable dei bottoni
+
+// gestiamo il timer
+
+// interval con incremento dei secondi
+
+// -------
+// gestione dello stop
+// gestire disable dei bottoni
+// blocchiamo il timer
