@@ -3,7 +3,14 @@
 // PREPARAZIONE
 
 // selezioniamo tutti gli elementi di input e output di pagina
+// input
+const startButton = document.querySelector(".btn-success");
+const stopButton = document.querySelector(".btn-danger");
+// output
+const display = document.getElementById("display");
 
+// variabile globale per interval
+let timer;
 
 
 
@@ -11,11 +18,16 @@
 
 // -------
 // gestione dello start
-// gestire disable dei bottoni
+startButton.addEventListener("click", () => {
 
-// gestiamo il timer
+    // gestire disable dei bottoni
 
-// interval con incremento dei secondi
+    // gestiamo il timer
+
+    // interval con incremento dei secondi
+
+});
+
 
 // -------
 // gestione dello stop
