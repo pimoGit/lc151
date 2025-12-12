@@ -1,58 +1,8 @@
-// PARTE DI PREPARAZIONE
-
-// selezioniamo tutti i campi (select/input)
-const titleField = document.getElementById("title-field");
-const nameField = document.getElementById('name-field');
-const companyField = document.getElementById('company-field');
-const roleField = document.getElementById('role-field');
-const emailField = document.getElementById('email-field');
-const phoneField = document.getElementById('phone-field');
-const picField = document.getElementById('company-pic-field');
-
-// seleziono il form di riferimento
-const form = document.querySelector('form');
-
-// seleziono la card
-const previewCard = document.querySelector(".card");
-
-// seleziono tutti gli elementi di pagina relativi ai campi
-const title = document.getElementById("title");
-const nameUser = document.getElementById('name');
-const company = document.getElementById('company');
-const role = document.getElementById('role');
-const email = document.getElementById('email');
-const phone = document.getElementById('phone');
-const companyPic = document.getElementById('company-pic');
+console.log("sei nel file giusto");
 
 
-// PARTE DI ELABORAZIONE
+setTimeout(myFunction, 1000);
 
-// gestione visibilità iniziale della card
-previewCard.classList.add("sparisci");
-
-// gestione dell'invio del form
-form.addEventListener("submit", (event) => {
-    // blocchiamo comportamento di base del form
-    event.preventDefault();
-
-    // console.log("hai inviato il form");
-
-
-    // PARTE DI OUTPUT
-    title.innerText = titleField.value;
-    nameUser.innerText = nameField.value.trim();
-    company.innerText = companyField.value.trim();
-    role.innerText = roleField.value.trim();
-    email.innerText = emailField.value.trim();
-    phone.innerText = phoneField.value.trim();
-    companyPic.src = picField.value;
-
-    // gestione visibilità della card all'invio
-    previewCard.classList.remove("sparisci");
-
-    // pulisco i campi del form dopo l'invio
-    form.reset();
-})
-
-
-
+function myFunction() {
+    alert('Hello');
+}
