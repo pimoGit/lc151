@@ -1,32 +1,75 @@
-// defniamo il nostro oggetto palla
-const palla = {
-    'colore': ["blue", "red"],
-    'tipo': "pallina da golf",
-    'diametro': 3
-}
+// defniamo il nostro array di oggetti classi
+const classi =
+
+    [
+
+        {
+            'nome': 'Classe 1',
+            'numero_studenti': 10,
+            'studenti': ["Alessia", "Mattia"]
+        },
+
+        {
+            'nome': 'Classe 2',
+            'numero_studenti': 15
+        }
+
+    ];
+
+
+
 
 
 // modifichiamo valore di una propietà
 // palla.diametro = 5; // DOT notation
-palla["diametro"] = 5 // Brackets notation
+// const primaClasse = classi[0];
+
+classi[0].nome = "Classe 1 nuovo nome";
+
+// console.log(classi[0].nome);
 
 
 
 
 // mi faccio tornare il valore di tipo
-console.log(palla.colore[1]);// DOT notation
-console.log(palla["colore"]); // Brackets notation
+const numeStudetiClasse2 = classi[1].numero_studenti;
+// console.log(numeStudetiClasse2);
 
-const nomeProp = prompt("inserisci il nome delle prop")
 
 // inserire una nuova prop
-palla.peso = 10; // DOT notation
-palla[nomeProp] = 10; // Brackets notation
+classi[0].insegnate = "nuovo insegante";
 
-console.log(palla);
+// ritornare il primo studente della prima classe
+const primoStudente = classi[0].studenti[0];
+// console.log(primoStudente);
+
+
+// inseriasco una nuova classe alla fine
+const nuovoObjClasse = {
+    'nome': 'Classe 3',
+    'numero_studenti': 25
+}
+
+classi.push(nuovoObjClasse);
+
+
+// console.log(classi);
+
 
 // se voglio ciclare l'oggetto per estrarre tutto quello che c'è
-for (const chiave in palla) {
-    console.log(chiave, palla[chiave]);
+for (let index = 0; index < classi.length; index++) {
+    const classeIesima = classi[index];
+    console.log(classeIesima);
+
+    // console.log("ilnome della classe è :", classeIesima.nome, "e ha tot parteciapnti", classeIesima.numero_studenti);
+
+    for (const key in classeIesima) {
+
+        const valoreClasse = classeIesima[key];
+
+        console.log(key, valoreClasse);
+
+    }
+
 }
 
