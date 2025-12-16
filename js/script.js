@@ -1,23 +1,10 @@
-const person = {
-    firstName: 'Marco',
-    lastName: 'Lanci',
-    age: 37,
-    year: 1986
-}
-// const nomeUtente = person.firstName;
-// const cognomeUtente = person.lastName;
-// const etaUtente = person.age;
+const myArr = ["primo valore", "secondo valore", "terzo valore", "quarto valore"];
+
+// const primoValore = myArr[0];
+// const secondoValore = myArr[1];
+// const quartoValore = myArr[3];
+
+const [primoValore, secondoValore, , quartoValore] = myArr;
 
 
-// destructuring
-const { firstName: nomeUtente, lastName: cognomeUtente, age: etaUtente } = person;
-
-console.log(nomeUtente, cognomeUtente, etaUtente);
-
-const outputCont = document.getElementById("container");
-
-const template = `<div>${nomeUtente}</div>
-<div>${cognomeUtente}</div>
-<div>${etaUtente}</div>`;
-
-outputCont.innerHTML = template;
+console.log(primoValore, secondoValore, quartoValore);
