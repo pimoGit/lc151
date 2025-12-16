@@ -41,8 +41,11 @@ const nameField = document.getElementById('name');
 const roleField = document.getElementById('role');
 const imageField = document.getElementById('image');
 
-// chiamo funzione per renderizzare la lista mebri
+// chiamo funzione per renderizzare la lista mebri al caricamento della page
 rederTeam(teamMembers, teamContainer);
+
+// gestione di aggiunta nuovo membro
+form.addEventListener("submit", addMember);
 
 
 
@@ -85,5 +88,35 @@ function createMemberCard(memebrObj) {
         `;
 
     return card
+
+}
+
+// funzione di gestione della creazione nuovo membro (gestione invio form)
+function addMember(event) {
+
+    // preveniamo comportamento di base form
+    event.preventDefault();
+
+    // recupero i valori dei campi
+    const name = nameField.value;
+    const role = roleField.value;
+    const image = imageField.value;
+
+    // creo il nuovo oggetto del membo del team
+    const newMember = {
+        name,
+        role,
+        image
+    }
+
+    // aggiorniamo i dati (array di oggetti)
+    teamMembers.push(newMember);
+
+    // reset campi form
+    event.target.reset();
+
+    // aggiorniamo la pagina
+    // chiamo funzione per renderizzare la lista mebri
+    rederTeam(teamMembers, teamContainer);
 
 }
