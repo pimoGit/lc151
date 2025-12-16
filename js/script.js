@@ -15,16 +15,17 @@ const zucchine = [
 const zucchine2 = [...zucchine];
 
 
-zucchine[0].varieta = "Varietà Nuova";
+
 
 const nuovoArr = [];
 
 for (let index = 0; index < zucchine.length; index++) {
     const oggettoZucchina = zucchine[index];
 
-    nuovoArr.push({ ...oggettoZucchina };)
+    nuovoArr.push({ ...oggettoZucchina });
 
 }
 
+zucchine[0].varieta = "Varietà Nuova";
 
-console.log(zucchine, zucchine2);
+console.log(zucchine, nuovoArr);
