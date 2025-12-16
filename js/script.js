@@ -1,14 +1,37 @@
-// funzione che somma dei numeri
-function sommaNUmeri(...numeri) {
+const obj = {
+    name: 'palla',
+    peso: 50
+};
 
-    let somma = 0;
+// qui NON sto creando un nuovo oggetto e tanto meno un clone ma sto duplicando il ref allo stesso
+const copyObj2 = obj;
 
-    for (let index = 0; index < numeri.length; index++) {
-        const numero = numeri[index];
-        somma += numero
-    }
+copyObj2.peso = 150;
 
-    return somma
+// creao un nuovo oggetto clone (dei contenuti) dell'oggetto di partenza
+const copyObj = { ...obj, "altraProp": "altro" };
+
+
+
+const copyObj3 = {};
+
+// creao manualmente il clone di un oggetto
+for (let chiave in obj) {
+    // console.log(chiave);
+
+    copyObj3[chiave] = obj[chiave];
 }
 
-console.log(sommaNUmeri(3, 7, 8, 2, 10));
+copyObj3.peso = 300;
+
+console.log(obj, copyObj3);
+
+
+
+copyObj.peso = 100;
+
+
+console.log(obj, copyObj, copyObj2);
+//{name: "palla", peso: 50}
+
+
