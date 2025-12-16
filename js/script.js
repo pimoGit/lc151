@@ -1,37 +1,16 @@
-const obj = {
-    name: 'palla',
-    peso: 50
-};
+const arr1 = [2, 4, 7, 8];
+const arr2 = [12, 14, 17, 18]
 
-// qui NON sto creando un nuovo oggetto e tanto meno un clone ma sto duplicando il ref allo stesso
-const copyObj2 = obj;
+// NON crea una clone ma duplica il ref allo stesso array
+const arrCopiaFinta = arr1;
 
-copyObj2.peso = 150;
+// clone array reale
+const arrCopiaReale = [...arr1, 18, 20];
 
-// creao un nuovo oggetto clone (dei contenuti) dell'oggetto di partenza
-const copyObj = { ...obj, "altraProp": "altro" };
+arr1.push(10);
 
+// nuovo array con concatenazione di altri due
+const arrTotale = [...arr1, ...arr2, 33];
 
-
-const copyObj3 = {};
-
-// creao manualmente il clone di un oggetto
-for (let chiave in obj) {
-    // console.log(chiave);
-
-    copyObj3[chiave] = obj[chiave];
-}
-
-copyObj3.peso = 300;
-
-console.log(obj, copyObj3);
-
-
-
-copyObj.peso = 100;
-
-
-console.log(obj, copyObj, copyObj2);
-//{name: "palla", peso: 50}
-
+console.log(arrTotale);
 
