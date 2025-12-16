@@ -1,10 +1,14 @@
-const myArr = ["primo valore", "secondo valore", "terzo valore", "quarto valore"];
+// funzione che somma dei numeri
+function sommaNUmeri(...numeri) {
 
-// const primoValore = myArr[0];
-// const secondoValore = myArr[1];
-// const quartoValore = myArr[3];
+    let somma = 0;
 
-const [primoValore, secondoValore, , quartoValore] = myArr;
+    for (let index = 0; index < numeri.length; index++) {
+        const numero = numeri[index];
+        somma += numero
+    }
 
+    return somma
+}
 
-console.log(primoValore, secondoValore, quartoValore);
+console.log(sommaNUmeri(3, 7, 8, 2, 10));
