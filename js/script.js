@@ -1,122 +1,23 @@
-const teamMembers = [
+const pics = [
     {
-        name: 'Wayne Barnett',
-        role: 'Founder & CEO',
-        image: 'wayne-barnett-founder-ceo.jpg',
-    },
-    {
-        name: 'Angela Caroll',
-        role: 'Chief Editor',
-        image: 'angela-caroll-chief-editor.jpg',
-    },
-    {
-        name: 'Walter Gordon',
-        role: 'Office Manager',
-        image: 'walter-gordon-office-manager.jpg',
-    },
-    {
-        name: 'Angela Lopez',
-        role: 'Social Media Manager',
-        image: 'angela-lopez-social-media-manager.jpg',
-    },
-    {
-        name: 'Scott Estrada',
-        role: 'Developer',
-        image: 'scott-estrada-developer.jpg',
-    },
-    {
-        name: 'Barbara Ramos',
-        role: 'Graphic Designer',
-        image: 'barbara-ramos-graphic-designer.jpg',
-    },
+        image: 'img/01.jpg',
+        title: 'Svezia',
+        text: 'Scandinavia\'s blend of nature and innovation.',
+    }, {
+        image: 'img/02.jpg',
+        title: 'Norvegia',
+        text: 'Fjords, mountains, and coastal charm in Nordic splendor.',
+    }, {
+        image: 'img/03.jpg',
+        title: 'Alaska',
+        text: 'Untamed wilderness and rugged beauty in the Last Frontier.',
+    }, {
+        image: 'img/04.jpg',
+        title: 'Gran Canyon',
+        text: 'Nature\'s masterpiece, a colorful tapestry of cliffs.',
+    }, {
+        image: 'img/05.jpg',
+        title: "Skyrim",
+        text: 'Epic Nordic fantasy with dragons and ancient magic.',
+    }
 ];
-
-// parte di setUp
-// const outputTest = document.getElementById("team-list");
-const teamContainer = document.querySelector(".team-container");
-
-// selezione di elementi form
-const form = document.getElementById("member-form");
-const nameField = document.getElementById('name');
-const roleField = document.getElementById('role');
-const imageField = document.getElementById('image');
-
-// chiamo funzione per renderizzare la lista mebri al caricamento della page
-rederTeam(teamMembers, teamContainer);
-
-// gestione di aggiunta nuovo membro
-form.addEventListener("submit", addMember);
-
-
-
-// funzioni dell'APP
-
-// funzione che fa il rendering completo delle card dei membri del team
-function rederTeam(arraRef, outputEL) {
-    // mi creo var che accumulerà gli elementi di ouput
-    let cards = "";
-
-    // output di prova ciclando l'array di oggetti
-    for (let index = 0; index < arraRef.length; index++) {
-        // estrapoliamo ogni volta un oggetto membro divero
-        const memberTeam = arraRef[index];
-
-        // destrutturiamo l'oggetto
-        // const { name, image, role } = memberTeam;
-
-        // andiamo ad ogni giro ad incrementare il contenuto dell'output
-        cards += createMemberCard(memberTeam);
-    }
-
-    // inseriamo la stringa completa che innerHTML trasformerà, nell'elemento di output
-    outputEL.innerHTML = cards;
-}
-
-// funzione che genera la card ricevendo oggetto dal quale prendere le info
-function createMemberCard(memebrObj) {
-
-    const card = `
-    <div class="team-card">
-            <div class="card-image">
-                <img src="img/${memebrObj.image}" alt="${memebrObj.name}" />
-            </div >
-        <div class="card-text">
-            <h3>${memebrObj.name}</h3>
-            <p>${memebrObj.role}</p>
-        </div>
-    </div >
-        `;
-
-    return card
-
-}
-
-// funzione di gestione della creazione nuovo membro (gestione invio form)
-function addMember(event) {
-
-    // preveniamo comportamento di base form
-    event.preventDefault();
-
-    // recupero i valori dei campi
-    const name = nameField.value;
-    const role = roleField.value;
-    const image = imageField.value;
-
-    // creo il nuovo oggetto del membo del team
-    const newMember = {
-        name,
-        role,
-        image
-    }
-
-    // aggiorniamo i dati (array di oggetti)
-    teamMembers.push(newMember);
-
-    // reset campi form
-    event.target.reset();
-
-    // aggiorniamo la pagina
-    // chiamo funzione per renderizzare la lista mebri
-    rederTeam(teamMembers, teamContainer);
-
-}
