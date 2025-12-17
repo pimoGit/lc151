@@ -24,6 +24,9 @@ const pics = [
 
 // PARTE DI SETUP
 const carouselGallery = document.querySelector(".gallery");
+// seleziono frecce
+const prevButton = document.getElementById("prev");
+const nextButton = document.getElementById("next");
 
 
 // PARTE ELABORAZIONE
@@ -64,3 +67,36 @@ console.log(images);
 // settiamo una var per gestire l'indice della slide con active
 let curretActiveIndex = 0;
 images[curretActiveIndex].classList.add("active");
+
+
+// gestione della logica degli eventi prev/next
+nextButton.addEventListener("click", () => {
+    // console.log("Hey hai cliccato next!");
+
+    // toglo l'active dalla slide attuale
+    images[curretActiveIndex].classList.remove("active");
+
+
+    // aggiorno il valore dell'indice attivo
+    curretActiveIndex++;
+
+    // aggiungere l'active alla nuova slide attiva
+    images[curretActiveIndex].classList.add("active");
+
+
+})
+
+prevButton.addEventListener("click", () => {
+    // console.log("Hey hai cliccato prev!");
+
+    // toglo l'active dalla slide attuale
+    images[curretActiveIndex].classList.remove("active");
+
+
+    // aggiorno il valore dell'indice attivo
+    curretActiveIndex--;
+
+    // aggiungere l'active alla nuova slide attiva
+    images[curretActiveIndex].classList.add("active");
+
+})
