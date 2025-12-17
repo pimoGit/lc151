@@ -84,24 +84,7 @@ thumbs[curretActiveIndex].classList.add("active");
 
 
 // gestione della logica degli eventi prev/next
-nextButton.addEventListener("click", () => {
-    // console.log("Hey hai cliccato next!");
-
-    // aggiorno il valore dell'indice da passare per aggiornare reale indice attivo
-    const newIndexRef = curretActiveIndex === images.length - 1 ? 0 : curretActiveIndex + 1;
-
-    // versione estesa
-    // let newIndexRef2;
-    // if(curretActiveIndex === images.length - 1) {
-    //     newIndexRef2 = 0;
-    // } else {
-    //     newIndexRef2 = curretActiveIndex + 1;
-    // }
-
-    // eseguo funzione che aggiorna slide e index reale
-    setCurrentSlide(newIndexRef);
-
-})
+nextButton.addEventListener("click", goNext)
 
 prevButton.addEventListener("click", () => {
     // console.log("Hey hai cliccato prev!");
@@ -128,8 +111,18 @@ for (let i = 0; i < thumbs.length; i++) {
 }
 
 
+// gestione autoplay
+let intervalId = setInterval(goNext, 2000);
 
+// stoppiamo l'autoplay all'hover sul blocco slides
+carouselGallery.addEventListener("mouseover", () => {
+    clearInterval(intervalId);
+});
 
+// riattiviamo l'autoplay all'out dal blocco slides
+carouselGallery.addEventListener("mouseout", () => {
+    intervalId = setInterval(goNext, 2000);
+});
 
 // FUNZIONI
 
@@ -149,4 +142,24 @@ function setCurrentSlide(newIndex) {
     images[curretActiveIndex].classList.add("active");
     // aggiungere l'active alla nuova thumb attiva
     thumbs[curretActiveIndex].classList.add("active");
+}
+
+// funzione del NEXT
+function goNext() {
+    // console.log("Hey hai cliccato next!");
+
+    // aggiorno il valore dell'indice da passare per aggiornare reale indice attivo
+    const newIndexRef = curretActiveIndex === images.length - 1 ? 0 : curretActiveIndex + 1;
+
+    // versione estesa
+    // let newIndexRef2;
+    // if(curretActiveIndex === images.length - 1) {
+    //     newIndexRef2 = 0;
+    // } else {
+    //     newIndexRef2 = curretActiveIndex + 1;
+    // }
+
+    // eseguo funzione che aggiorna slide e index reale
+    setCurrentSlide(newIndexRef);
+
 }
