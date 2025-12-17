@@ -23,7 +23,10 @@ const pics = [
 ];
 
 // PARTE DI SETUP
+// container slides
 const carouselGallery = document.querySelector(".gallery");
+// container thumbs
+const thumbsGallery = document.getElementById("thumbnails");
 // seleziono frecce
 const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
@@ -34,6 +37,8 @@ const nextButton = document.getElementById("next");
 // gestione dinamica delle slide
 // var di accumulo stringa elementi da iniettare
 let galleryElements = "";
+let thumbsElements = "";
+
 
 // ciliamo l'array di oggetti delle slide
 for (let i = 0; i < pics.length; i++) {
@@ -42,6 +47,9 @@ for (let i = 0; i < pics.length; i++) {
 
     // destrutturiamo l'oggetto
     const { image, title, text } = slideObjet;
+
+    // collezioniamo i vari elementi creati per le thumbs
+    thumbsElements += `<img alt="${title}" src="${image}">`;
 
     // collezioniamo i vari elementi creati in base agli oggetti (stringa)
     galleryElements += `
@@ -59,14 +67,20 @@ for (let i = 0; i < pics.length; i++) {
 }
 // mettiamo tutto in pagina (la stringa viene convertita in vero HTML)
 carouselGallery.innerHTML = galleryElements;
+// mettiamo tutto in blocco thumbs in pagina 
+thumbsGallery.innerHTML = thumbsElements;
 
 // seleziono il gruppo delle slides
 const images = document.querySelectorAll("#carousel figure");
 console.log(images);
+// seleziono il gruppo delle thumbs
+const thumbs = document.querySelectorAll("#thumbnails img");
+console.log(thumbs);
 
 // settiamo una var per gestire l'indice della slide con active
 let curretActiveIndex = 0;
 images[curretActiveIndex].classList.add("active");
+thumbs[curretActiveIndex].classList.add("active");
 
 
 // gestione della logica degli eventi prev/next
@@ -110,6 +124,8 @@ function setCurrentSlide(newIndex) {
 
     // toglo l'active dalla slide attuale
     images[curretActiveIndex].classList.remove("active");
+    // toglo l'active dalla thumb attuale
+    thumbs[curretActiveIndex].classList.remove("active");
 
 
     // aggiorno il valore dell'indice attivo
@@ -117,4 +133,6 @@ function setCurrentSlide(newIndex) {
 
     // aggiungere l'active alla nuova slide attiva
     images[curretActiveIndex].classList.add("active");
+    // aggiungere l'active alla nuova thumb attiva
+    thumbs[curretActiveIndex].classList.add("active");
 }
