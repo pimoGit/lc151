@@ -73,30 +73,40 @@ images[curretActiveIndex].classList.add("active");
 nextButton.addEventListener("click", () => {
     // console.log("Hey hai cliccato next!");
 
-    // toglo l'active dalla slide attuale
-    images[curretActiveIndex].classList.remove("active");
+    // aggiorno il valore dell'indice da passare per aggiornare reale indice attivo
+    const newIndexRef = curretActiveIndex + 1;
 
-
-    // aggiorno il valore dell'indice attivo
-    curretActiveIndex++;
-
-    // aggiungere l'active alla nuova slide attiva
-    images[curretActiveIndex].classList.add("active");
-
+    // eseguo funzione che aggiorna slide e index reale
+    setCurrentSlide(newIndexRef);
 
 })
 
 prevButton.addEventListener("click", () => {
     // console.log("Hey hai cliccato prev!");
+    // aggiorno il valore dell'indice da passare per aggiornare reale indice attivo
+    const newIndexRef = curretActiveIndex - 1;
+
+    // eseguo funzione che aggiorna slide e index reale
+    setCurrentSlide(newIndexRef);
+
+})
+
+
+
+
+
+// FUNZIONI
+
+// funzione che setta la slide giusta rivecevdo indice
+function setCurrentSlide(newIndex) {
 
     // toglo l'active dalla slide attuale
     images[curretActiveIndex].classList.remove("active");
 
 
     // aggiorno il valore dell'indice attivo
-    curretActiveIndex--;
+    curretActiveIndex = newIndex;
 
     // aggiungere l'active alla nuova slide attiva
     images[curretActiveIndex].classList.add("active");
-
-})
+}
