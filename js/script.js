@@ -74,7 +74,15 @@ nextButton.addEventListener("click", () => {
     // console.log("Hey hai cliccato next!");
 
     // aggiorno il valore dell'indice da passare per aggiornare reale indice attivo
-    const newIndexRef = curretActiveIndex + 1;
+    const newIndexRef = curretActiveIndex === images.length - 1 ? 0 : curretActiveIndex + 1;
+
+    // versione estesa
+    // let newIndexRef2;
+    // if(curretActiveIndex === images.length - 1) {
+    //     newIndexRef2 = 0;
+    // } else {
+    //     newIndexRef2 = curretActiveIndex + 1;
+    // }
 
     // eseguo funzione che aggiorna slide e index reale
     setCurrentSlide(newIndexRef);
@@ -84,7 +92,7 @@ nextButton.addEventListener("click", () => {
 prevButton.addEventListener("click", () => {
     // console.log("Hey hai cliccato prev!");
     // aggiorno il valore dell'indice da passare per aggiornare reale indice attivo
-    const newIndexRef = curretActiveIndex - 1;
+    const newIndexRef = curretActiveIndex === 0 ? images.length - 1 : curretActiveIndex - 1;
 
     // eseguo funzione che aggiorna slide e index reale
     setCurrentSlide(newIndexRef);
