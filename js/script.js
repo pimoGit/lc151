@@ -42,7 +42,7 @@ for (let i = 0; i < pics.length; i++) {
 
     // collezioniamo i vari elementi creati in base agli oggetti (stringa)
     galleryElements += `
-    <figure class="active">
+    <figure>
         <figcaption>
             <h2>${title}</h2>
             <h3>${text}</h3>
@@ -50,9 +50,17 @@ for (let i = 0; i < pics.length; i++) {
         <img alt="${title}" src="${image}">
     </figure>`;
 
-    console.log(galleryElements);
+    // console.log(galleryElements);
 
 
 }
 // mettiamo tutto in pagina (la stringa viene convertita in vero HTML)
 carouselGallery.innerHTML = galleryElements;
+
+// seleziono il gruppo delle slides
+const images = document.querySelectorAll("#carousel figure");
+console.log(images);
+
+// settiamo una var per gestire l'indice della slide con active
+let curretActiveIndex = 0;
+images[curretActiveIndex].classList.add("active");
