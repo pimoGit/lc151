@@ -113,6 +113,20 @@ prevButton.addEventListener("click", () => {
 
 })
 
+// aggiungiamo evento ad ogni elemento della nodeList delle thumb
+for (let i = 0; i < thumbs.length; i++) {
+    const thumbItem = thumbs[i];
+    // console.log(thumbItem);
+
+    // aggiungiamo evento ad ogni singolo elemento
+    thumbItem.addEventListener("click", () => {
+        // console.log("Eh ti ho visto hai cliccato su thumb", i);
+        // setto gli active corretti in base all'index che corrisponderà ad "i"
+        setCurrentSlide(i);
+    })
+
+}
+
 
 
 

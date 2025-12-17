@@ -91,9 +91,12 @@
     height: 100%;
     border-radius: 10px;
     filter: grayscale(1);
+    cursor: pointer;
+    transition: translate 0.5s;
 }
 
 #thumbnails img.active {
-    filter: grayscale(0);
+    translate: -2px;
+    filter: grayscale(0.5);
     box-shadow: 0 0 10px dodgerblue;
 }
