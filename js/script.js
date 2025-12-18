@@ -1,45 +1,39 @@
-const cars = [
+const people = [
     {
-        marca: 'Alfa Romeo',
-        modello: 'Giulietta',
-        alimentazione: 'benzina',
+        firstName: 'Marco',
+        lastName: 'Lanci',
+        age: 35,
     },
     {
-        marca: 'FIAT',
-        modello: 'Doblò',
-        alimentazione: 'diesel',
+        firstName: 'Antonio',
+        lastName: 'Nicodemo',
+        age: 16,
     },
     {
-        marca: 'FIAT',
-        modello: 'Panda',
-        alimentazione: 'benzina',
+        firstName: 'Luigi',
+        lastName: 'Versi',
+        age: 14,
     },
     {
-        marca: 'FIAT',
-        modello: 'Fiorino',
-        alimentazione: 'metano',
-    },
-    {
-        marca: 'Ford',
-        modello: 'Fiesta',
-        alimentazione: 'diesel',
-    },
-    {
-        marca: 'Ford',
-        modello: 'Ka',
-        alimentazione: 'gpl',
-    },
-    {
-        marca: 'Smart',
-        modello: 'Smart',
-        alimentazione: 'elettrico',
+        firstName: 'Mario',
+        lastName: 'Rossi',
+        age: 18,
     },
 ];
 
-const benzinaCars = cars.filter(car => car.alimentazione === "benzina");
-const dieselCars = cars.filter(car => car.alimentazione === "diesel");
-const altCars = cars.filter(car => car.alimentazione !== "diesel" && car.alimentazione !== "benzina");
 
+const drivingPeople = people.map(person => {
+    const { firstName, lastName, age } = person;
+    const canDrive = age >= 18 ? 'può' : 'non può';
 
+    // let canDrive2 = undefined;
+    // if (age >= 18) {
+    //     canDrive2 = 'può';
+    // } else {
+    //     canDrive2 = 'non può';
+    // }
 
-console.log(benzinaCars, dieselCars, altCars);
+    return `${firstName} ${lastName} ${canDrive} guidare`;
+})
+
+console.log(drivingPeople);
