@@ -4,8 +4,8 @@ const cats = [
     { name: 'Garfield', color: 'Orange' },
 ];
 
-cats.forEach((cat) => {
-    console.log(`${cat.name}'s color is ${cat.color}`);
+cats.forEach((cat, i) => {
+    console.log(`${cat.name}'s color is ${cat.color} in the ${i} position`);
 });
 
 
