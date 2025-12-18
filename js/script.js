@@ -1,25 +1,27 @@
-const students = [
-    { id: 1, name: 'Marco', year: 1 },
-    { id: 1, name: 'Silvia', year: 2 },
-    { id: 1, name: 'Ginevra', year: 1 }
+const people = [
+    { id: 4, name: 'Paolo', age: 32 },
+    { id: 3, name: 'Clelia', age: 34 },
 ];
 
-const firstYearStudents = students.filter(studentItem => {
-    return studentItem.year === 1
+// trova la person con id 3
+const myPerson = people.find((person) => {
+    return person.id === 3;
 });
 
-console.log(firstYearStudents, students);
+//RISULTATO: { id: 3, name: 'Clelia', age: 34 }
+
+console.log(myPerson);
 
 
-// for tradizionale
-const firstYearStudents2 = [];
+// versione con for tradizionale
+let myPerson2;
 
-for (let i = 0; i < students.length; i++) {
-    const studentItem2 = students[i];
+for (let i = 0; i < people.length; i++) {
+    const person2 = people[i];
 
-    if (studentItem2.year === 1) {
-        firstYearStudents2.push(studentItem2);
+    if (person2.id === 3) {
+        myPerson2 = person2;
     }
 }
 
-console.log(firstYearStudents2);
+console.log(myPerson2);
