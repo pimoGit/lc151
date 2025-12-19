@@ -26,6 +26,11 @@ playButton.addEventListener("click", playDice);
 // Funzione gioco
 function playDice() {
 
+    // ripuliamo output dadi
+    myOutput.innerHTML = "";
+    outputPlayUno.innerHTML = "";
+    outputPlayDue.innerHTML = "";
+
     // gestiamo la chiamata ajax con axios
     axios.get(endpoint)
         .then(response => {
@@ -45,9 +50,16 @@ function playDice() {
             // settiamo var di messaggio
             let message = "pareggio";
 
+            // creiamo le img
+            const img1 = document.createElement("img");
+            img1.src = `img/${playerUnoNum}.png`;
+
+            const img2 = document.createElement("img");
+            img2.src = `img/${playerDueNum}.png`;
+
             // output dei numeri
-            outputPlayUno.innerText = playerUnoNum;
-            outputPlayDue.innerText = playerDueNum;
+            outputPlayUno.appendChild(img1);
+            outputPlayDue.appendChild(img2);
 
             // condizioni per output messaggio vincita
             if (playerUnoNum > playerDueNum) message = "Ha vinto il primo giocatore";
